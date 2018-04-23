@@ -1,0 +1,83 @@
+{
+    "apiVersion": "1.0.0",
+    "swaggerVersion": "1.2",
+    "basePath": "http://host:port/api/",
+    "resourcePath": "/accounts",
+    "apis": [
+        {
+            "path": "/accounts/{customer_id}",
+            "description": "retrieves orders for given customer defined by customer ID",
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "nickname": "getAccount",
+                    "type": "",
+                    "items": {},
+                    "summary": "retrieves orders for given customer defined by customer ID",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "customer_id",
+                            "description": "Customer ID",
+                            "dataType": "int",
+                            "type": "int",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": true,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "order_id",
+                            "description": "Retrieve order with given ID only",
+                            "dataType": "int",
+                            "type": "int",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "order_nr",
+                            "description": "Retrieve order with given number only",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "created_from",
+                            "description": "Date-time string, MySQL format. If specified, API will retrieve orders that were created starting from created_from",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        },
+                        {
+                            "paramType": "query",
+                            "name": "created_to",
+                            "description": "Date-time string, MySQL format. If specified, API will retrieve orders that were created before created_to",
+                            "dataType": "string",
+                            "type": "string",
+                            "format": "",
+                            "allowMultiple": false,
+                            "required": false,
+                            "minimum": 0,
+                            "maximum": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
